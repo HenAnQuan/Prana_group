@@ -31,12 +31,11 @@ export default {
 .header {
   height: 120px;
   display: flex;
-  /* padding: 0 149px; */
   width: 100%;
-  /* background-color: #1c1c1c; */
   background-image: linear-gradient(to bottom, rgba(28,28,28,.5),rgba(28,28,28,0));
   justify-content: space-between;
   color: white;
+  /* font-family:"黑体"; */
 }
 .logo{
     margin-left:149px;

@@ -10,6 +10,9 @@
 
 <style lang="scss">
 @import url(./assets/css/reset.css);
+.header,.body,.footer{
+  font-family:"黑体";
+}
 // #app {
 //   font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;

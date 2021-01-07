@@ -33,7 +33,7 @@
                   <img src="../assets/icon/address1.png" alt="" width="23px" height="23px"><span>舟山璞纳养生酒店&nbsp;&nbsp;&nbsp;地址：舟山市塘头村&nbsp;&nbsp;&nbsp;电话：021-33882933</span> 
               </div>
               <div class="copy">
-                  <p>条款和条件Cookie政策&nbsp;&nbsp;&nbsp;版权所有©2021安浙江益宏静方投资有限公司</p>
+                  <p>条款和条件Cookie政策&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权所有©2021安浙江益宏静方投资有限公司</p>
               </div>
           </div>
       </div>
@@ -49,7 +49,7 @@ export default {
 <style scoped>
     .footer{
         margin-top: 68px;
-        /* display: flex; */
+        /* font-family:"黑体"; */
     }
     .tripadvisor{
         color: #404040;
