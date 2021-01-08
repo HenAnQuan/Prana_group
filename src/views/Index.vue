@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Header />
+    <Header :movetoFirstSecond="movetoFirstSecond"></Header>
+    <!-- <Header></Header> -->
     <div class="body">
       <!-- 首屏背景 -->
       <div class="firstScreen">
@@ -17,12 +18,60 @@
               width="36px"
               height="36px"
             />
-            <span>浙江省舟山市塘头村</span>
+            <p>浙江省舟山市塘头村</p>
           </span>
         </div>
         <div class="booking-info">
           <h2>舟山璞纳酒店</h2>
-          <input type="text" placeholder="1间客房" />
+          <!-- <input type="text" placeholder="1间客房" /> -->
+          <div style="position:relative" class="downMenu room">
+            <div class="rooms" @click.stop="openMenu($event)">1间客房</div>
+            <div class="rooms-down">
+                <ul class="rooms-select">
+                    <li>1间客房</li>
+                    <li>2间客房</li>
+                    <li>3间客房</li>
+                </ul>
+            </div>
+          </div>
+          <div style="position:relative" class="downMenu customer">
+            <div class="rooms" @click.stop="openMenu($event)">1位客人</div>
+            <div class="rooms-down">
+                <ul class="rooms-select">
+                    <li>1位客人</li>
+                    <li>2位客人</li>
+                    <li>3位客人</li>
+                </ul>
+            </div>
+          </div>
+          <div style="position:relative" class="downMenu datetime">
+            <!-- <div class="rooms time" @click.stop="openMenu($event)">2020年12月30日 - 2021年1月1日</div>
+            <div class="rooms-down">
+                <ul class="rooms-select">
+                    <li>1位客人</li>
+                    <li>2位客人</li>
+                    <li>3位客人</li>
+                </ul>
+            </div> -->
+            <!-- 使用 element-ui 完成时间选择器 -->
+            <div>
+              <el-date-picker
+                v-model="value1"
+                type="daterange"
+                range-separator="至"
+                start-placeholder="开始日期"
+                end-placeholder="结束日期">
+              </el-date-picker>
+            </div>
+
+          </div>
+          <div class="bd-reserve">
+            <button class="bt-reserve">预定</button>
+          </div>
+          <div class="order-group">
+            <a href="" class="">查看现有订单</a>
+            <a href="" class="">电话预约</a>
+          </div>
         </div>
       </div>
 
@@ -64,7 +113,19 @@
       
       <!-- 酒店轮播图 -->
       <div class="main-info">
-        <img src="../assets/img/banner2-1.jpg" alt="">
+        <swiper ref="mySwiper" :options="swiperOptions">
+          <!-- <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+          <swiper-slide>Slide 4</swiper-slide>
+          <swiper-slide>Slide 5</swiper-slide> -->
+          <swiper-slide v-for="(item,index) in banner" :key="index">
+            <img :src="'../assets/img/banner2-'+index+'.jpg'" alt="">
+          </swiper-slide>
+          <swiper-slide><img src="../assets/img/banner2-1.jpg" alt=""></swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+        <!-- <img src="../assets/img/banner2-1.jpg" alt=""> -->
       </div>
 
       <!-- 酒店部分连接 -->
@@ -85,18 +146,36 @@
 <script>
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue"
+import Footer from "@/components/Footer.vue";
+
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+// import 'swiper/swiper-bundle.css'
 
 export default {
   name: "Index",
   components: {
-    Header,Footer
+    Header,Footer,
+    Swiper,SwiperSlide,
   },
   data() {
     return {
       w: "",
       h: "",
+      movetoFirstSecond:false,
+      value1: '',
+      banner:["../assets/img/banner2-1.jpg","../assets/img/banner2-2.jpg"],
+      swiperOptions: {
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          // Some Swiper option/callback...
+        }
     };
+  },
+  computed:{
+    swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
   },
   mounted() {
     let w = window.innerWidth;
@@ -105,19 +184,60 @@ export default {
     this.h = h / 1080;
     console.log(w);
     console.log(h);
+    console.log(window);
+    console.log(document.documentElement.clientHeight,window.screen.height);
+
+    console.log(document.querySelector(".el-date-editor"));
+    console.log('Current Swiper instance object', this.swiper)
+      this.swiper.slideTo(3, 1000, false)
+
   },
   methods:{
     getSize(){
       this.w = window.innerWidth/1920;
       this.h = window.innerHeight/1080;
+    },
+    // 添加事件：首屏高度，当滚轮滚动到第二屏达到导航条下方时（浏览器可视区域高度-导航条高度时）；更改 movetoFirstSecond 值为 ture 。导航条通过类样式绑定切换到黑底的样式
+    intoSecondscreen(){
+      // console.log(document.body.clientHeight,window.screen.height,document.documentElement.clientHeight);        //用于获取 文档高度 , 屏幕高度 ,   浏览器可视区域高度
+      // console.log(window.scrollY);      //获取滚轮滚动的高度。初始为0，向下滚动增加，向上滚动数值减小；同时当滚动到文档最下方时，得到的最大值与浏览器可视区域高度相加等于文档高度
+      window.scrollY >= document.documentElement.clientHeight-120 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
+      // console.log(window.scrollY,document.documentElement.clientHeight-120,this.movetoFirstSecond);    测试
+    },
+    // 封装酒店预定区域中下拉菜单的功能
+    openMenu($event){
+      console.log($event.target);
+      let rooms = $event.target;
+      let roomsDown = rooms.nextSibling;
+      let roomsSelect = roomsDown.querySelectorAll(".rooms-select>li");
+      console.log(roomsDown.style.display);
+      // if(roomsDown.style.display!="none") return;
+      // 下拉菜单 预定酒店房间数量
+      // var rooms = document.getElementById("rooms");
+      // var roomsDown = document.getElementById("rooms-down");
+      // var roomsSelect = document.querySelectorAll(".rooms-select>li");
+      console.log(roomsSelect);
+      roomsDown.style.display = "block";
+        for(var i=0;i<roomsSelect.length;i++){
+            roomsSelect[i].onclick = function(){
+               rooms.innerHTML = this.innerHTML;
+               console.log(this.innerHTML);
+               roomsDown.style.display = "none";
+            }
+        }
     }
   },
-  created(){
+  created(){  
+    // 添加监听，实时获取窗口的高度和宽度
     window.addEventListener('resize', this.getSize);
-    this.getSize()
+    this.getSize();
+    // 添加监听，实时获取滚动条滚动的高度
+    window.addEventListener('scroll', this.intoSecondscreen);
+    this.intoSecondscreen();
   },
   destroyed(){
-    window.removeEventListener('resize', this.getSize)
+    window.removeEventListener('resize', this.getSize);
+    window.removeEventListener('scroll', this.intoSecondscreen);
   }
 };
 </script>
@@ -125,7 +245,7 @@ export default {
 <style lang="scss" scoped>
 .body{
   color: #404040;  
-  // font-family:"黑体";
+  font-size: 18px;
 }
 .header {
   position: fixed;
@@ -134,6 +254,9 @@ export default {
 .firstScreen{
   width: 100%;
 }
+
+
+// 酒店预定部分样式
 .booking {
   width: 100%;
   margin-top: -4px;
@@ -141,23 +264,135 @@ export default {
   color: white;
   background-color: #1c1c1c;
 }
+.booking h2{
+  font-size: 32px;
+}
 .booking-hotel {
   display: flex;
-  justify-items: space-between;
+  align-items: center;
 }
 .booking-address {
   margin-left: 41px;
+  display: flex;
+  align-items: center;
+}
+.booking-address p{
+  font-size: 24px;
+  display: inline-block;
+  align-self: center;
 }
 .booking-address img {
   margin-right: 16px;
 }
 .booking-info {
   display: flex;
-  margin-top: 54px;
+  margin-top: 28px;
+  align-items: center;
 }
+.downMenu{
+  position: relative;
+}
+// 酒店预定部分样式  房间预定数量下拉列表样式
+.rooms{
+  color: white;
+  width: 120px;
+  height: 39px;
+  border-bottom:1px solid white;
+  background-color: #1c1c1c;
+  text-align: center;
+  font-size: 24px;
+  line-height: 39px;
+  cursor: pointer;
+  position: relative;
+}
+.rooms-down{
+  border: 1px solid white;
+  width: 120px;
+  // margin-left: 5px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+.rooms-select{
+  padding: 0;
+  margin: 0;
+}
+.rooms-select>li{
+  list-style: none;
+  font-size: 24px;
+  text-align: center;
+  height: 39px;
+  line-height: 39px;
+  color: white;
+  background-color: rgba(64,64,64,.6);
+  cursor: pointer;
+}
+li:hover{
+  background-color: rgba(64,64,64,.9);
+}
+
+.customer {
+  margin-left: 58px;
+}
+.datetime>.time{
+  width: 443px;
+  margin-left: 58px;
+}
+.bd-reserve{
+  width: 278px;
+  height: 70px;
+  border: 2px solid white;
+  margin-left: 84px;
+}
+.bt-reserve{
+  width: 269px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  margin: 5px 4px;
+  font-size: 32px;
+  background-color: white;
+}
+
+// 以下修改elment-ui 的时间选择器默认样式
+.el-range-editor{
+  margin-left: 58px;
+}
+// .el-range-editor{
+//   margin-left: 25px;
+//   background-color: #1c1c1c;
+//   border: none;
+//   border-radius: 0;
+//   border-bottom: 1px solid white;
+//   color: white !important;
+// }
+// .el-date-editor span{
+//   color: white !important;
+// }
+// 以上修改elment-ui 的时间选择器默认样式
+
+.order-group{
+  margin-left: 60px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-group a{
+  color:#96b1ad;
+}
+.order-group a:last-child{
+  margin-top: 11px;
+}
+// 酒店预定部分样式
 .booking-info h2{
   margin-right: 100px;
 }
+.booking-info input{
+  
+}
+
 
 .brand-story{
   display: flex;
@@ -212,6 +447,10 @@ export default {
   width: 100%;
   height: 920px;
 }
+.swiper{
+  // width: 100%;
+  // height: 920px;
+}
 
 
 .hotel-link{
@@ -226,6 +465,7 @@ export default {
   text-align: center;
   color: white;
   line-height: 274px;
+  font-size: 18px;
 }
 .hotel1{
   background-image: url(../assets/img/hotel-link1.jpg);

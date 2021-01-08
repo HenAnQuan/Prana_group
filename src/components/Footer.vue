@@ -59,6 +59,7 @@ export default {
         justify-content: center;
         margin-bottom: 55px;
         width: 100%;
+        font-size: 18px;
     }
     .tripadvisor-logo{
         display: flex;
@@ -74,6 +75,7 @@ export default {
         height: 63px;
         border: 1px solid #404040;
         padding: 0 0 0 20px;
+        font-size: 18px;
     }
     .submit button{
         color: white;
@@ -86,10 +88,9 @@ export default {
 
 
 .copyright{
-    width: 100%;
     height: 225px;
     background-color: #1c1c1c;
-    /* color: white; */
+    color: white;
     padding: 0 149px;
     display: flex;
     align-items: center;
