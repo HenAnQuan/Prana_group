@@ -69,6 +69,7 @@ export default {
   background-color: white;
   justify-content: space-between;
   color: #404040;
+  position: absolute;
 }
 
 .logo{
