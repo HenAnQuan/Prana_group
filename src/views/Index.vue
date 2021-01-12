@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Header :movetoFirstSecond="movetoFirstSecond"></Header>
+    <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true"></Header>
     <!-- <Header></Header> -->
     <div class="body container">
       <!-- 首屏背景 -->
       <div class="firstScreen">
-        <!-- <img src="../assets/img/banner1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/> -->
-        <img src="../assets/img/banner1.jpg" alt="">
+        <!-- <img src="../assets/img/banner1-1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/> -->
+        <img src="../assets/img/banner1-1.jpg" alt="">
       </div>
       
       <!-- 酒店预订 -->
@@ -96,8 +96,9 @@ export default {
       movetoFirstSecond:false,
       
       banners:[
-        require("../assets/img/banner2-1.jpg"),
-        require("../assets/img/banner2-2.jpg")
+        require("../assets/img/banner1-2-1.jpg"),
+        require("../assets/img/banner1-2-2.jpg"),
+        require("../assets/img/banner1-2-3.jpg"),
         ],
       swiperOptions: {
           pagination: {
@@ -180,48 +181,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.body{
-  color: #404040;  
-  font-size: 18px;
-}
-.header {
-  position: fixed;
-  top: 0;
-}
-
-
-.firstScreen{
-  width: 100%;
-  text-align: center;
-  border: 3px solid red;
-  // overflow: hidden;
-  // margin: 0 auto;
-  height: 1080px;
-  @media screen and (min-width:1200px) {
-    
-  }
-  @media screen and (min-width:678px) and (max-width:120px){
-    
-  }
-}
-.firstScreen img{
-  // width: auto;  
-  // height: auto;  
-  // max-width: 100%;  
-  // max-height: 100%;  
-  @media screen and (min-width:1200px) {
-    width: 1920px;
-    height: 1080px;
-  }
-  @media screen and (min-width:678px) and (max-width:120px){
-    width: auto;  
-    height: auto;  
-    max-width: 100%;  
-    max-height: 100%; 
-  }
-}
-
-
+// @import url(../assets/css/global.css);
 
 .brand-story{
   display: flex;

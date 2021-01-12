@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div :class="{'header-nomal':!isFixed,'header-fixed':isFixed}">
       <!-- 当滚动到第二屏达到导航条的位置时，加载另一个 header2 样式；  首屏时,movetoFirstSecond值为false，加载header1样式 -->
       <div v-if="movetoFirstSecond" class="header2">
         <div class="logo">
@@ -45,13 +45,20 @@ export default {
         //     $event.getElementsByTagName('span')
         // }
     },
-    props:['movetoFirstSecond']
+    props:['movetoFirstSecond','isFixed']
     
 };
 </script>
 
 <style scoped>
-.header{
+.header-nomal{
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+}
+.header-fixed{
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 .header1 {
@@ -69,7 +76,7 @@ export default {
   background-color: white;
   justify-content: space-between;
   color: #404040;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .logo{

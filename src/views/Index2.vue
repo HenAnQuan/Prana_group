@@ -5,7 +5,7 @@
     <div class="body">
       <!-- 首屏背景 -->
       <div class="firstScreen">
-        <img src="../assets/img/banner1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/>
+        <img src="../assets/img/banner1-1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/>
       </div>
       <!-- 酒店预订 -->
       <div class="booking">
@@ -158,8 +158,8 @@ export default {
       movetoFirstSecond:false,
       value1: '',
       banners:[
-        require("../assets/img/banner2-1.jpg"),
-        require("../assets/img/banner2-2.jpg")
+        require("../assets/img/banner1-2-1.jpg"),
+        require("../assets/img/banner1-2-2.jpg")
         ],
       swiperOptions: {
           pagination: {
