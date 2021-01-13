@@ -18,12 +18,7 @@
           </div>
         </div>
         <div style="clear: both"></div>
-        <img
-          src="../assets/img/banner2-1.jpg"
-          alt=""
-          width="100%"
-          height="100%"
-        />
+        <img src="../assets/img/banner2-1.jpg" alt="" width="1000px" />
       </div>
       <!-- 正文内容 -->
       <div class="main-info">
@@ -113,24 +108,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.firstScreen {
-  width: 100%;
-  text-align: center;
-  height: 1080px;
-}
-.firstScreen img {
-  @media screen and (min-width: 1200px) {
-    width: 1920px;
-    height: 1080px;
-  }
-  @media screen and (min-width: 678px) and (max-width: 120px) {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
 .label > div {
   // float: left;
   position: absolute;

@@ -1,14 +1,14 @@
 <template>
-  <div  class="">
+  <div  class=" container">
     <!-- <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true" @isOpenLogPanel="openLogPanel"></Header> -->
     <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true"></Header>
     <!-- <Header></Header> -->
     <Login/>
-    <div class="body container">
+    <div class="body">
       <!-- 首屏背景 -->
-      <div class="firstScreen">
+      <div class="firstScreen w-100">
         <!-- <img src="../assets/img/banner1-1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/> -->
-        <img src="../assets/img/banner1-1.jpg" alt="">
+        <img src="../assets/img/banner1-1.jpg" alt="" class="w-100"/>
       </div>
       
       <!-- 酒店预订 -->
@@ -84,14 +84,15 @@ import Footer from "@/components/Footer.vue";
 import BookingHotel from "@/components/BookingHotel.vue";
 import Login from "@/components/Login.vue"
 
+
+
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import "swiper/css/swiper.css";
 
 export default {
   name: "Index",
   components: {
-    Header,Footer,BookingHotel,
-    Login
+    Header,Footer,BookingHotel,Login
   },
   data() {
     return {
@@ -122,21 +123,21 @@ export default {
   computed:{
   },
   mounted() {
-    let w = window.innerWidth;
-    let h = window.innerHeight;
-    this.w = w / 1920;
-    this.h = h / 1080;
-    console.log(w);
-    console.log(h);
-    console.log(window);
-    console.log(document.documentElement.clientHeight,window.screen.height);
-    console.log(document.querySelector(".el-date-editor"));
+    // let w = window.innerWidth;
+    // let h = window.innerHeight;
+    // this.w = w / 1920;
+    // this.h = h / 1080;
+    // console.log(w);
+    // console.log(h);
+    // console.log(window);
+    // console.log(document.documentElement.clientHeight,window.screen.height);
+    // console.log(document.querySelector(".el-date-editor"));
 
   },
   methods:{
     getSize(){
-      this.w = window.innerWidth/1920;
-      this.h = window.innerHeight/1080;
+      this.w = document.documentElement.clientHeight/1920;
+      this.h = document.documentElement.clientHeight/1080;
     },
     // 添加事件：首屏高度，当滚轮滚动到第二屏达到导航条下方时（浏览器可视区域高度-导航条高度时）；更改 movetoFirstSecond 值为 ture 。导航条通过类样式绑定切换到黑底的样式
     intoSecondscreen(){
@@ -149,14 +150,14 @@ export default {
   },
   created(){  
     // 添加监听，实时获取窗口的高度和宽度
-    window.addEventListener('resize', this.getSize);
-    this.getSize();
+    // window.addEventListener('resize', this.getSize);
+    // this.getSize();
     // 添加监听，实时获取滚动条滚动的高度
     window.addEventListener('scroll', this.intoSecondscreen);
     this.intoSecondscreen();
   },
   destroyed(){
-    window.removeEventListener('resize', this.getSize);
+    // window.removeEventListener('resize', this.getSize);
     window.removeEventListener('scroll', this.intoSecondscreen);
   }
 };

@@ -5,7 +5,7 @@
     <div class="body container">
       <!-- 首屏背景 -->
       <div class="firstScreen">
-        <img src="../assets/img/banner4-1.jpg" alt="" />
+        <img src="../assets/img/banner4-1.jpg" alt=""/>
         <div class="title">
           <p>
             我们是国内第一家研究养生酒店的机构，多年来研究了国际上上百家养生酒店，并研发出适合中国国情的养生酒店的模式。
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="footImg">
-            <img src="../assets/img/banner4-2.jpg" alt="">
+            <img src="../assets/img/banner4-2.jpg" alt="" width="100%">
         </div>
       </div>
     </div>
@@ -107,7 +107,7 @@ export default {
 
 <style lang="scss" scoped>
 .firstScreen > .title {
-  margin-top: -119px;
+  margin: -119px auto 119px auto;
 }
 .firstScreen > .title > p {
   color: white;

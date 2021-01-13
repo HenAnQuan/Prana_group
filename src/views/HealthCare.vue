@@ -10,9 +10,9 @@
       <!-- 正文内容 -->
       <div class="main-info">
         <div class="secondScreen">
-          <div><img src="../assets/img/banner3-2-1.jpg" alt="" /></div>
-          <div><img src="../assets/img/banner3-2-2.jpg" alt="" /></div>
-          <div><img src="../assets/img/banner3-2-3.jpg" alt="" /></div>
+          <div><img src="../assets/img/banner3-2-1.jpg" alt="" width="100%"/></div>
+          <div><img src="../assets/img/banner3-2-2.jpg" alt="" width="100%"/></div>
+          <div><img src="../assets/img/banner3-2-3.jpg" alt="" width="100%"/></div>
         </div>
         <div class="text-description">
           <p class="health">
