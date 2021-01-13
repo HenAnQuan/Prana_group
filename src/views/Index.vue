@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div  class="">
+    <!-- <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true" @isOpenLogPanel="openLogPanel"></Header> -->
     <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true"></Header>
     <!-- <Header></Header> -->
+    <Login/>
     <div class="body container">
       <!-- 首屏背景 -->
       <div class="firstScreen">
@@ -80,6 +82,7 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import BookingHotel from "@/components/BookingHotel.vue";
+import Login from "@/components/Login.vue"
 
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import "swiper/css/swiper.css";
@@ -87,14 +90,14 @@ import BookingHotel from "@/components/BookingHotel.vue";
 export default {
   name: "Index",
   components: {
-    Header,Footer,BookingHotel
+    Header,Footer,BookingHotel,
+    Login
   },
   data() {
     return {
       w: "",
       h: "",
       movetoFirstSecond:false,
-      
       banners:[
         require("../assets/img/banner1-2-1.jpg"),
         require("../assets/img/banner1-2-2.jpg"),
@@ -142,28 +145,7 @@ export default {
       window.scrollY >= document.documentElement.clientHeight-120 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
       // console.log(window.scrollY,document.documentElement.clientHeight-120,this.movetoFirstSecond);    测试
     },
-    // 封装酒店预定区域中下拉菜单的功能
-    openMenu($event){
-      console.log($event.target);
-      let rooms = $event.target;
-      let roomsDown = rooms.nextSibling;
-      let roomsSelect = roomsDown.querySelectorAll(".rooms-select>li");
-      console.log(roomsDown.style.display);
-      // if(roomsDown.style.display!="none") return;
-      // 下拉菜单 预定酒店房间数量
-      // var rooms = document.getElementById("rooms");
-      // var roomsDown = document.getElementById("rooms-down");
-      // var roomsSelect = document.querySelectorAll(".rooms-select>li");
-      console.log(roomsSelect);
-      roomsDown.style.display = "block";
-        for(var i=0;i<roomsSelect.length;i++){
-            roomsSelect[i].onclick = function(){
-               rooms.innerHTML = this.innerHTML;
-               console.log(this.innerHTML);
-               roomsDown.style.display = "none";
-            }
-        }
-    }
+    
   },
   created(){  
     // 添加监听，实时获取窗口的高度和宽度

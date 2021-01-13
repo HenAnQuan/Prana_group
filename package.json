@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
     "jquery": "^3.5.1",
+    "postcss-px2rem": "^0.3.0",
     "swiper": "^5.4.5",
     "vue": "^2.6.12",
     "vue-awesome-swiper": "^4.1.1",
@@ -27,6 +28,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "lib-flexible": "^0.3.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

@@ -12,5 +12,17 @@ module.exports = {
         Popper: ['popper.js', 'default']
        })
     ]
-   }
+   },
+  //  css: {
+  //   loaderOptions: {
+  //     css: {},
+  //     postcss: {
+  //       plugins: [
+  //         require('postcss-px2rem')({
+  //           remUnit: 192
+  //         })
+  //       ]
+  //     }
+  //   }
+  // }
 }

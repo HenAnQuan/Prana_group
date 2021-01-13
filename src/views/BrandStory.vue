@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true"/>
+    <Login/>
     <div class="body container">
       <!-- 首屏 -->
       <div class="firstScreen">
@@ -79,11 +80,13 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import Login from "@/components/Login.vue";
 export default {
   name: "BrandStroy",
   components: {
     Header,
     Footer,
+    Login
   },
   data() {
     return {

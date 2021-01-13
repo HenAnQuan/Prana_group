@@ -8,8 +8,8 @@
             <img
               src="../assets/icon/address1.png"
               alt=""
-              width="36px"
-              height="36px"
+              width="21px"
+              height="21px"
             />
             <p>浙江省舟山市塘头村</p>
           </span>
@@ -77,6 +77,30 @@ export default {
             value1: '',
         }
     },
+    methods:{
+      // 封装酒店预定区域中下拉菜单的功能
+    openMenu($event){
+      console.log($event.target);
+      let rooms = $event.target;
+      let roomsDown = rooms.nextSibling;
+      let roomsSelect = roomsDown.querySelectorAll(".rooms-select>li");
+      console.log(roomsDown.style.display);
+      // if(roomsDown.style.display!="none") return;
+      // 下拉菜单 预定酒店房间数量
+      // var rooms = document.getElementById("rooms");
+      // var roomsDown = document.getElementById("rooms-down");
+      // var roomsSelect = document.querySelectorAll(".rooms-select>li");
+      console.log(roomsSelect);
+      roomsDown.style.display = "block";
+        for(var i=0;i<roomsSelect.length;i++){
+            roomsSelect[i].onclick = function(){
+               rooms.innerHTML = this.innerHTML;
+               console.log(this.innerHTML);
+               roomsDown.style.display = "none";
+            }
+        }
+    }
+    }
 }
 </script>
 
@@ -85,33 +109,33 @@ export default {
 .booking {
   width: 100%;
   margin-top: -4px;
-  padding: 52px 149px 78px 149px;
+  padding: 55px 280px 55px 280px;
   color: white;
   background-color: #1c1c1c;
 }
 .booking h2{
-  font-size: 32px;
+  font-size: 18px;
 }
 .booking-hotel {
   display: flex;
   align-items: center;
 }
 .booking-address {
-  margin-left: 41px;
+  margin-left: 84px;
   display: flex;
   align-items: center;
 }
 .booking-address p{
-  font-size: 24px;
+  font-size: 18px;
   display: inline-block;
   align-self: center;
 }
 .booking-address img {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 .booking-info {
   display: flex;
-  margin-top: 28px;
+  margin-top: 31px;
   align-items: center;
 }
 .downMenu{
@@ -120,19 +144,19 @@ export default {
 // 酒店预定部分样式  房间预定数量下拉列表样式
 .rooms{
   color: white;
-  width: 120px;
-  height: 39px;
+  width: 70px;
+  height: 30px;
   border-bottom:1px solid white;
   background-color: #1c1c1c;
   text-align: center;
-  font-size: 24px;
-  line-height: 39px;
+  font-size: 16px;
+  line-height: 30px;
   cursor: pointer;
   position: relative;
 }
 .rooms-down{
   border: 1px solid white;
-  width: 120px;
+  width: 70px;
   // margin-left: 5px;
   display: none;
   position: absolute;
@@ -145,44 +169,48 @@ export default {
 }
 .rooms-select>li{
   list-style: none;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   height: 39px;
   line-height: 39px;
-  color: white;
-  background-color: rgba(64,64,64,.6);
+  // color: white;
+  // background-color: rgba(64,64,64,.6);
+  background-color: white;
+  color: #1c1c1c;
   cursor: pointer;
 }
 li:hover{
-  background-color: rgba(64,64,64,.9);
+  // background-color: rgba(64,64,64,.9);
+  background-color: #1c1c1c;
+  color: white;
 }
 
 .customer {
-  margin-left: 58px;
+  margin-left: 60px;
 }
 .datetime>.time{
   width: 443px;
   margin-left: 58px;
 }
 .bd-reserve{
-  width: 278px;
-  height: 70px;
-  border: 2px solid white;
-  margin-left: 84px;
+  width: 136 px;
+  height: 38px;
+  border: 1px solid white;
+  margin-left: 91px;
 }
 .bt-reserve{
-  width: 269px;
-  height: 60px;
+  width: 130px;
+  height: 32px;
   padding: 0;
   border: 0;
-  margin: 5px 4px;
-  font-size: 32px;
+  margin: 3px;
+  font-size: 16px;
   background-color: white;
 }
 
 // 以下修改elment-ui 的时间选择器默认样式
 .el-range-editor{
-  margin-left: 58px;
+  margin-left: 60px;
 }
 // .el-range-editor{
 //   margin-left: 25px;
@@ -199,20 +227,20 @@ li:hover{
 
 .order-group{
   margin-left: 60px;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 16px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 .order-group a{
   color:#96b1ad;
 }
 .order-group a:last-child{
-  margin-top: 11px;
+  margin-left: 60px;
 }
 // 酒店预定部分样式
 .booking-info h2{
-  margin-right: 100px;
+  margin-right: 91px;
 }
 .booking-info input{
   

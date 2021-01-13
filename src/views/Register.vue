@@ -55,15 +55,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
     div>.header2{
         position: relative;
     }
     .startInput{
-        height: 960px;
+        height: 690px;
         width: 1960px;
         background:#eef2f3;
-        padding:85px 0;
+        padding:135px 0;
     }
     .register{
         width: 1620px;
@@ -74,7 +74,7 @@ export default {
 
     .register-info{
         width: 485px;
-        height: 690px;
+        height: 636px;
         background-color: white;
         margin-right: 28px;
         padding-top: 54px;
@@ -101,6 +101,9 @@ export default {
         margin-bottom: 18px;
         padding: 0 0 0 13px;
     }
+    .register>.register-info>.last>input{
+        margin-bottom: 0px;
+    }
     .register-info>.code{
         width: 330px;
         height: 42px;
@@ -108,7 +111,7 @@ export default {
         display: flex;
         justify-content:space-between;
     }
-    .register-info>.code>input:not(.last){
+    .register-info>.code>input{
         width: 167px;
         height: 38px;
         padding: 0 0 0 13px;

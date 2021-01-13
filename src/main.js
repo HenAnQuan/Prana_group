@@ -12,12 +12,20 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
-import $ from 'jquery';
+// import $ from 'jquery';
+// import 'bootstrap'
+// // 引入bootstrap样式
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/js/bootstrap.min.js'
+// Vue.prototype.$ = $
+
 // Vue.use($);
 // import BootstrapVue from 'bootstrap-vue'
 // import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
 // Vue.use(BootstrapVue)
+
+// import 'lib-flexible'
 
 Vue.config.productionTip = false
 

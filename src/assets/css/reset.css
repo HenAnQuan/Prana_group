@@ -41,3 +41,15 @@ table {
    border-collapse: collapse;
    border-spacing: 0;
 }
+
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #fff;
+  text-decoration: none;
+}
+button{
+   outline: none;
+}
