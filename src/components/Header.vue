@@ -259,4 +259,27 @@ a:focus, a:hover{
   display: flex;
   align-items: center;
 }
+
+// @media (min-width: 768px) and (max-width: 991px) {}
+// @media (min-width: 992px) and (max-width: 1199px) {}
+// @media (min-width: 1200px) and (max-width: 1439px) {}
+// @media (min-width: 1440px) {}
+@media screen and(max-width: 1440px) {
+  .logo {margin-left: 120px;}
+  .nav{margin-right: 120px;}
+}
+@media screen and(max-width: 1024px) {
+  .logo {margin-left: 60px;}
+  .nav{margin-right: 60px;}
+}
+@media screen and(max-width: 992px) {
+  .logo {margin-left: 20px;}
+  .nav{margin-right: 20px;}
+}
+@media screen and(max-width: 810px) {
+  .navItem{padding-left: 30px;}
+  .login{margin: 0 30px;}
+}
+@media screen and(max-width: 660px) {
+}
 </style>

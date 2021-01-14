@@ -1,13 +1,10 @@
 <template>
   <div  class=" container">
-    <!-- <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true" @isOpenLogPanel="openLogPanel"></Header> -->
     <Header :movetoFirstSecond="movetoFirstSecond" :isFixed="true"></Header>
-    <!-- <Header></Header> -->
     <Login/>
     <div class="body">
       <!-- 首屏背景 -->
       <div class="firstScreen w-100">
-        <!-- <img src="../assets/img/banner1-1.jpg" alt="" :width="1920 * w + 'px'" :height="1080 * h + 'px'"/> -->
         <img src="../assets/img/banner1-1.jpg" alt="" class="w-100"/>
       </div>
       
@@ -86,9 +83,6 @@ import Login from "@/components/Login.vue"
 
 
 
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-// import "swiper/css/swiper.css";
-
 export default {
   name: "Index",
   components: {
@@ -106,7 +100,7 @@ export default {
         ],
       swiperOptions: {
           pagination: {
-            el: '.swiper-pagination'
+            el: '.swiper-pagination',
           },
           loop: true,
           autoplay: {
@@ -123,21 +117,14 @@ export default {
   computed:{
   },
   mounted() {
-    // let w = window.innerWidth;
-    // let h = window.innerHeight;
-    // this.w = w / 1920;
-    // this.h = h / 1080;
-    // console.log(w);
-    // console.log(h);
-    // console.log(window);
-    // console.log(document.documentElement.clientHeight,window.screen.height);
-    // console.log(document.querySelector(".el-date-editor"));
-
+    this.w = document.documentElement.clientWidth/1920;
+    this.h = document.documentElement.clientHeight/1080;
   },
   methods:{
     getSize(){
-      this.w = document.documentElement.clientHeight/1920;
+      this.w = document.documentElement.clientWidth/1920;
       this.h = document.documentElement.clientHeight/1080;
+      console.log(document.documentElement.clientWidth,document.documentElement.clientHeight);
     },
     // 添加事件：首屏高度，当滚轮滚动到第二屏达到导航条下方时（浏览器可视区域高度-导航条高度时）；更改 movetoFirstSecond 值为 ture 。导航条通过类样式绑定切换到黑底的样式
     intoSecondscreen(){
@@ -150,8 +137,8 @@ export default {
   },
   created(){  
     // 添加监听，实时获取窗口的高度和宽度
-    // window.addEventListener('resize', this.getSize);
-    // this.getSize();
+    window.addEventListener('resize', this.getSize);
+    this.getSize();
     // 添加监听，实时获取滚动条滚动的高度
     window.addEventListener('scroll', this.intoSecondscreen);
     this.intoSecondscreen();
@@ -169,40 +156,44 @@ export default {
 .brand-story{
   display: flex;
   // align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 115px;
+  padding:0 240px;
 }
 .brand{
-  width: 515px;
-  
+  // width: 515px;
+  flex: 1;
 }
 .brand1,.brand2{
-  margin-right: 37px;
+  margin-right: 20px;
 }
 .brand-img{
-  width: 515px;
+  // width: 515px;
   height: 382px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #404040;
   text-align: center;
+  padding: 12px;
+  box-sizing: border-box;
 }
-.brand-story img{
-  width: 485px;
-  height: 352px;
-  margin-top: 15px;
+.brand-img img{
+  width: 100%;
+  height: 100%;
 }
 .brand-info{
-  width: 485px;
   margin-left:15px;
 }
 .brand-title{
-  font-size: 24px;
+  font-size: 16px;
   margin-top: 42px;
   margin-bottom: 29px;
 }
 .brand-content{
   text-align:justify;
   text-justify:inter-ideograph;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 31px;
   margin-bottom: 29px;
 }
@@ -210,34 +201,42 @@ export default {
   padding-bottom: 6px;
   text-decoration: underline;
   color: #404040;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 
 .main-info{
   margin-top: 96px;
   width: 100%;
-  height: 920px;
+  height: 100%;
 }
-.swiper{
-  // width: 100%;
-  // height: 920px;
+.swiper-slide{
+  text-align: center;
+}
+.swiper-slide>img{
+  width: 100%;
+  height: 100%;
 }
 
 
 .hotel-link{
   margin-top: 62px;
   display: flex;
+  padding: 0 240px;
   justify-content: center;
 }
 .hotel{
-  width: 370px;
-  height: 274px;
+  // width: 370px;
+  // height: 274px;
+  width: 100%;
   background-image: url(../assets/img/hotel-link1.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
   text-align: center;
   color: white;
-  line-height: 274px;
-  font-size: 18px;
+  line-height: 275px;
+  font-size: 14px;
 }
 .hotel1{
   background-image: url(../assets/img/hotel-link1.jpg);
@@ -256,6 +255,32 @@ export default {
   display:inline-block;
 }
 .hotel-link>.hotel:not(:last-child){
-  margin-right: 47px;
+  margin-right: 20px;
 }
+
+
+
+
+@media screen and(max-width: 1440px) {
+  .brand-story{padding: 0 120px;}
+  .hotel-link{padding: 0 120px;}
+}
+@media screen and(max-width: 1024px) {
+  .brand-story{padding: 0 60px;}
+  .hotel-link{padding: 0 60px;}
+}
+@media screen and(max-width: 992px) {
+  .brand-story{padding: 0 20px;}
+  .hotel-link{padding: 0 20px;}
+}
+@media screen and(max-width: 810px) {
+  .hotel-link>.hotel:not(:last-child){margin-right: 10px;}
+}
+@media screen and(max-width: 660px) {
+}
+
+
+
+
+
 </style>

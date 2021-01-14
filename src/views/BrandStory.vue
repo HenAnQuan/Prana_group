@@ -115,12 +115,12 @@ export default {
 }
 .label > div > span {
   color: white;
-  font-size: 24px;
-  line-height: 50px;
+  font-size: 16px;
+  line-height: 40px;
 }
 .label > div {
-  width: 120px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
 }
 .label1 {
   background-color: rgba(0, 0, 0, 0.6);
@@ -162,39 +162,47 @@ export default {
 }
 
 .main-info {
-  // margin-top: -2px;
-  width: 1620px;
-  // height: 724px;
-  margin-top: 52px;
-  padding-left: 150px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  // width: 1620px;
+  box-sizing: border-box;
+  // margin-top: 52px;
+  // padding-left: 150px;
+  padding: 50px 240px;
+  width: 100%;
 }
 .brandStory {
   display: flex;
   align-items: center;
+  align-items: stretch;
 }
 .storyImg {
-  width: 810px;
-  height: 724px;
+  flex: 1;
+  // width: 810px;
+  // height: 724px;
   position: relative;
 }
 .storyImg > div {
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: rgba(0, 0, 0, 0.52);
   position: absolute;
   text-align: center;
 }
 .storyImg > div > p {
-  font-size: 24px;
+  font-size: 16px;
   color: white;
-  line-height: 100px;
+  line-height: 80px;
+}
+.storyImg>img{
+  width: 100%;
+  // height: 100%;
+  vertical-align: middle;
 }
 .storyText {
-  width: 810px;
-  height: 722px;
+  flex: 1;
+  // box-sizing: border-box;
+  // width: 810px;
+  // height: 722px;
+  padding: 20px 40px;
   border: 1px solid #c1c1c1;
   border-left: none;
   display: flex;
@@ -202,15 +210,40 @@ export default {
   justify-content: center;
 }
 .storyText > p {
+  width: 100%;
+  height: 100%  ;
   display: block;
-  width: 738px;
+  // width: 738px;
   // font-size: 18px;
-  line-height: 42px;
+  font-size: 14px;
+  line-height: 32px;
   text-align: justify;
 }
 
 .brandStory2,
 .brandStory3 {
   margin-top: 71px;
+}
+
+@media screen and(max-width: 1780px) {.storyText>p{line-height: 28px;}}
+@media screen and(max-width: 1690px) {.storyText>p{line-height: 22px;}}
+@media screen and(max-width: 1570px) {.storyText>p{line-height: 22px;}}
+
+@media screen and(max-width: 1440px) {
+  .brand-story{padding: 0 120px;}
+  .hotel-link{padding: 0 120px;}
+}
+@media screen and(max-width: 1024px) {
+  .brand-story{padding: 0 60px;}
+  .hotel-link{padding: 0 60px;}
+}
+@media screen and(max-width: 992px) {
+  .brand-story{padding: 0 20px;}
+  .hotel-link{padding: 0 20px;}
+}
+@media screen and(max-width: 810px) {
+  // .hotel-link>.hotel:not(:last-child){margin-right: 10px;}
+}
+@media screen and(max-width: 660px) {
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="booking">
     <!-- 酒店预订 -->
-    <div class="booking">
+    <div class="main-info">
       <div class="booking-hotel">
         <h2>预定酒店</h2>
         <span class="booking-address">
@@ -54,6 +54,7 @@
               range-separator="至"
               start-placeholder="开始日期"
               end-placeholder="结束日期"
+              style="width:250px"
             >
             </el-date-picker>
           </div>
@@ -61,10 +62,8 @@
         <div class="bd-reserve">
           <button class="bt-reserve">预定</button>
         </div>
-        <div class="order-group">
-          <a href="" class="">查看现有订单</a>
-          <a href="" class="">电话预约</a>
-        </div>
+        <a href="" class="order">查看现有订单</a>
+        <a href="" class="phone">电话预约</a>
       </div>
     </div>
   </div>
@@ -110,12 +109,16 @@ export default {
   width: 100%;
   margin-top: -4px;
   box-sizing: border-box;
-  padding: 55px 280px 55px 280px;
+  // padding: 55px 280px 55px 280px;
+  padding: 55px 240px;
   color: white;
   background-color: #1c1c1c;
 }
+.main-info{
+
+}
 .booking h2 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .booking-hotel {
   display: flex;
@@ -127,7 +130,7 @@ export default {
   align-items: center;
 }
 .booking-address p {
-  font-size: 18px;
+  font-size: 16px;
   display: inline-block;
   align-self: center;
 }
@@ -137,7 +140,8 @@ export default {
 .booking-info {
   display: flex;
   margin-top: 31px;
-  align-items: center;
+  // align-items: center;
+  justify-content: space-between;
 }
 .downMenu {
   position: relative;
@@ -150,7 +154,7 @@ export default {
   border-bottom: 1px solid white;
   background-color: #1c1c1c;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   cursor: pointer;
   position: relative;
@@ -170,7 +174,7 @@ export default {
 }
 .rooms-select > li {
   list-style: none;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   height: 39px;
   line-height: 39px;
@@ -187,33 +191,37 @@ li:hover {
 }
 
 .customer {
-  margin-left: 60px;
+  // margin-left: 60px;
 }
 .datetime > .time {
   width: 443px;
   margin-left: 58px;
 }
 .bd-reserve {
-  width: 136 px;
-  height: 38px;
+  width: 136px;
+  height: 40px;
+  padding: 4px;
+  box-sizing: border-box;
   border: 1px solid white;
-  margin-left: 91px;
+  // margin-left: 91px;
 }
 .bt-reserve {
-  width: 130px;
-  height: 32px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   border: 0;
-  margin: 3px;
-  font-size: 16px;
+  font-size: 14px;
+  color: #1c1c1c;
   background-color: white;
 }
 
 // 以下修改elment-ui 的时间选择器默认样式
+#el-date-picker{width: 250px;}
 .el-range-editor {
-  margin-left: 60px;
+  // margin-left: 60px;
   border-radius: 0;
   widows: 250px;
+  font-size: 14px;
 }
 // .el-range-editor{
 //   margin-left: 25px;
@@ -228,23 +236,25 @@ li:hover {
 // }
 // 以上修改elment-ui 的时间选择器默认样式
 
-.order-group {
-  margin-left: 60px;
-  font-size: 16px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-}
-.order-group a {
+.order,.phone {
+  font-size: 14px;
   color: #96b1ad;
-}
-.order-group a:last-child {
-  margin-left: 60px;
+  line-height: 40px;
 }
 // 酒店预定部分样式
 .booking-info h2 {
-  margin-right: 91px;
+  line-height: 40px;
 }
-.booking-info input {
-}
+
+@media screen and(max-width: 1440px) {.booking{padding: 55px 120px;}.bd-reserve{width: 100px;}}
+@media screen and(max-width: 1024px) {.booking{padding: 55px 60px;}}
+@media screen and(max-width: 992px) {.booking{padding: 55px 20px;}}
+
+
+
+
+
+
+
+
 </style>
