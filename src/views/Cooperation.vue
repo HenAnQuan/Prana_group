@@ -27,7 +27,7 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case1">
-                  <img src="../assets/img/case1.jpg" alt="" />
+                  <img src="../assets/img/case1.jpg" alt="" width="100%"/>
                 </div>
               </div>
               <p>上海阿纳迪酒店</p>
@@ -35,7 +35,7 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case2">
-                  <img src="../assets/img/case2.jpg" alt="" />
+                  <img src="../assets/img/case2.jpg" alt="" width="100%"/>
                 </div>
               </div>
               <p>腾冲东山养生酒店</p>
@@ -43,7 +43,7 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case3">
-                  <img src="../assets/img/case3.jpg" alt="" />
+                  <img src="../assets/img/case3.jpg" alt="" width="100%"/>
                 </div>
               </div>
               <p>三亚海棠湾养生酒店</p>
@@ -89,9 +89,7 @@ export default {
   mounted() {},
   methods: {
     intoSecondscreen() {
-      window.scrollY >= document.documentElement.clientHeight - 120
-        ? (this.movetoFirstSecond = true)
-        : (this.movetoFirstSecond = false);
+      window.scrollY >= 100 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
     },
   },
   created() {
@@ -106,30 +104,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.firstScreen{
+  position: relative;
+}
 .firstScreen > .title {
-  margin: -119px auto 119px auto;
+  // margin: -119px auto 119px auto;
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+  padding: 0 240px;
+  box-sizing: border-box;
 }
 .firstScreen > .title > p {
+  font-size: 14px;
   color: white;
+  line-height: 28px;
 }
 
 .main-info {
+  // padding: 0 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 14px;
 }
-.text-description,.img-description{
-  width: 1620px;
+.text-description,.img-description,.serveInclude{
+  // width: 1620px;
+  padding: 0 240px;
 }
 .text-description p {
   // color: white;
-  line-height: 35px;
+  line-height: 28px;
   margin: 82px 0 61px 0;
   text-align: justify;
 }
 
 .img-description > h2 {
   margin-bottom: 11px;
+  font-size: 16px;
 }
 .case {
   display: flex;
@@ -144,43 +156,70 @@ export default {
   margin: 17px 0 80px 0;
 }
 .case-bd {
-  width: 516px;
-  height: 348px;
+  // width: 516px;
+  // height: 348px;
+  padding: 12px;
   border: 2px solid #404040;
 }
 .case1,
 .case2,
 .case3 {
-  width: 490px;
-  height: 322px;
-  margin: 13px auto;
+  // width: 490px;
+  // height: 322px;
+  // margin: 13px auto;
 }
 
 
 .serveInclude{
     width: 100%;
-    height: 211px;
+    box-sizing: border-box;
+    // height: 211px;
     background-color: #1c1c1c;
 }
 .serve-info{
-    margin: 42px auto;
+    // margin: 42px auto;
+    padding: 42px 0;
 }
 .serve-info>h2{
     color:white;
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 22px;
 }
 .serve-info{
-    width: 1620px;
+    // width: 1620px;
 }
 .serve-info>p{
     color: white;
-    line-height: 31.5px;
+    line-height: 28px;
 }
 
 
 .footImg{
     // width: 1920px;
-    height: 802px;
+    // height: 802px;
 }
+
+
+
+@media screen and(max-width: 1440px) {
+  .text-description,.img-description,.serveInclude{padding: 0 120px;}
+  .firstScreen > .title{padding: 0 120px;}
+
+  .firstScreen > .title {bottom: 60px;}
+}
+@media screen and(max-width: 1024px) {
+  .text-description,.img-description,.serveInclude{padding: 0 60px;}
+  .firstScreen > .title{padding: 0 60px;}
+
+  .firstScreen > .title {bottom: 40px;}
+  .case > .case-content:not(:last-child) {margin-right: 15px;}
+  .serve-info{padding: 20px 0;}
+  .serve-info>h2{margin-bottom: 10px;}
+}
+@media screen and(max-width: 992px) {
+  .text-description,.img-description,.serveInclude{padding: 0 20px;}
+  .firstScreen > .title{padding: 0 20px;}
+}
+
+
 </style>

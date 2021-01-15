@@ -23,22 +23,23 @@
             调理健康问题，追根溯源，从源头入手：我们不仅仅缓解疲惫、失眠等症状，更针对产生这些症状的深层原因——压力、情绪、饮食等诱因，追根溯源，从源头入手，深入疗愈，从而彻底改善。<br />
             萃取本地物产精华，与大地连接，与自然一体：我们沿袭自然疗法的智慧，萃取本地茶园新鲜采摘的茶叶，精心研磨，用以做SPA原料，带来回归自然的极致体验。
           </p>
+        </div>
           <div class="img-description">
               <div class="pic-bd">
                   <div class="pic1">
-                      <img src="../assets/img/child-vacation1.jpg" alt="">
+                      <img src="../assets/img/child-vacation1.jpg" alt="" width="100%">
                   </div>
               </div>
               <div class="pic-bd">
                   <div class="pic2">
-                      <img src="../assets/img/child-vacation2.jpg" alt="">
+                      <img src="../assets/img/child-vacation2.jpg" alt="" width="100%">
                   </div>
               </div>
           </div>
-          <p class="child">
-              针对中国市场的特色——家庭亲子度假，我们还推出适合小朋友们养生体验和游乐的项目：儿童水果SPA，亲子盐雾呼吸疗愈、亲子有机农场，专属儿童泳池、儿童水上乐园和室内儿童乐园等等。这样全家人都可以享受一个完美的健康假期！
-          </p>
-        </div>
+          <div class="child">
+              <p>针对中国市场的特色——家庭亲子度假，我们还推出适合小朋友们养生体验和游乐的项目：儿童水果SPA，亲子盐雾呼吸疗愈、亲子有机农场，专属儿童泳池、儿童水上乐园和室内儿童乐园等等。这样全家人都可以享受一个完美的健康假期！</p>
+          </div>
+        
       </div>
     </div>
     <Footer />
@@ -64,9 +65,7 @@ export default {
   mounted() {},
   methods: {
     intoSecondscreen() {
-      window.scrollY >= document.documentElement.clientHeight - 120
-        ? (this.movetoFirstSecond = true)
-        : (this.movetoFirstSecond = false);
+      window.scrollY >= 100 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
     },
   },
   created() {
@@ -82,24 +81,30 @@ export default {
 
 <style lang="scss" scoped>
 .main-info {
+  font-size: 14px;
 }
 .secondScreen {
   width: 100%;
-  height: 1080px;
+  // height: 1080px;
   display: flex;
 }
+.secondScreen img{  
+  vertical-align: middle;
+}
 .text-description {
-    width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-    flex-direction: column;
+  flex-direction: column;
+  padding: 0 240px;
+  box-sizing: border-box;
 }
 .text-description>p,
 .text-description>div {
-  width: 1620px;
+  // width: 1620px;
 }
 .text-description p{
-    line-height: 31.5px;
+    line-height: 28px;
     text-align: justify;
 }
 .health{
@@ -107,6 +112,7 @@ export default {
 }
 
 .img-description{
+  padding: 0 240px;
     display: flex;
 }
 .img-description>.pic-bd:first-child{
@@ -114,16 +120,43 @@ export default {
 }
 .pic-bd{
     border: 2px solid #404040;
-    width: 786px;
-    height: 536px;
+    // width: 786px;
+    // height: 536px;
+    padding: 12px;
 }
 .pic1,.pic2{
-    width: 760px;
-    height: 510px;
-    margin: 13px auto;
+    // width: 760px;
+    // height: 510px;
+    // margin: 13px auto;
 }
 
 .child{
     margin-top: 49px;
+    padding: 0 240px;
+}
+.child p{
+  line-height: 28px;
+}
+
+
+@media screen and(max-width: 1440px) {
+  .text-description {padding: 0 120px;}
+  .img-description{padding: 0 120px;}
+  .child{padding: 0 120px;}
+}
+@media screen and(max-width: 1024px) {
+  .text-description {padding: 0 60px;}
+  .img-description{padding: 0 60px;}
+  .child{padding: 0 60px;}
+}
+@media screen and(max-width: 992px) {
+  .text-description {padding: 0 20px;}
+  .img-description{padding: 0 20px;}
+  .child{padding: 0 20px;}
+}
+@media screen and(max-width: 1440px) {
+  .img-description>.pic-bd:first-child{margin-right: 20px;}
+}
+@media screen and(max-width: 660px) {
 }
 </style>

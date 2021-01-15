@@ -130,8 +130,9 @@ export default {
     intoSecondscreen(){
       // console.log(document.body.clientHeight,window.screen.height,document.documentElement.clientHeight);        //用于获取 文档高度 , 屏幕高度 ,   浏览器可视区域高度
       // console.log(window.scrollY);      //获取滚轮滚动的高度。初始为0，向下滚动增加，向上滚动数值减小；同时当滚动到文档最下方时，得到的最大值与浏览器可视区域高度相加等于文档高度
-      window.scrollY >= document.documentElement.clientHeight-120 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
-      // console.log(window.scrollY,document.documentElement.clientHeight-120,this.movetoFirstSecond);    测试
+      // window.scrollY >= document.documentElement.clientHeight-120 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
+      // 更换触发header导航样式替换的条件
+      window.scrollY >= 100 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
     },
     
   },
@@ -173,7 +174,7 @@ export default {
   height: 382px;
   width: 100%;
   height: 100%;
-  border: 1px solid #404040;
+  border: 2px solid #404040;
   text-align: center;
   padding: 12px;
   box-sizing: border-box;
