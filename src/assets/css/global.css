@@ -1,7 +1,12 @@
+#app{
+  font-family: opensans !important;
+  font-family: "opensans" !important;
+}
 .header,
 .body,
 .footer {
-  font-family: "黑体";
+  font-family: opensans !important;
+  font-family: "opensans" !important;
 }
 .body {
   color: #404040;
