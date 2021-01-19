@@ -77,7 +77,11 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case1">
+<<<<<<< HEAD
                   <img src="../assets/img/case1.jpg" alt="" width="100%" />
+=======
+                  <img src="../assets/img/case1.jpg" alt="" width="100%"/>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 </div>
               </div>
               <p>上海阿纳迪酒店</p>
@@ -85,7 +89,11 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case2">
+<<<<<<< HEAD
                   <img src="../assets/img/case2.jpg" alt="" width="100%" />
+=======
+                  <img src="../assets/img/case2.jpg" alt="" width="100%"/>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 </div>
               </div>
               <p>腾冲东山养生酒店</p>
@@ -93,7 +101,11 @@
             <div class="case-content">
               <div class="case-bd">
                 <div class="case3">
+<<<<<<< HEAD
                   <img src="../assets/img/case3.jpg" alt="" width="100%" />
+=======
+                  <img src="../assets/img/case3.jpg" alt="" width="100%"/>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 </div>
               </div>
               <p>三亚海棠湾养生酒店</p>
@@ -174,7 +186,11 @@ export default {
       return flag;
     },
     intoSecondscreen() {
+<<<<<<< HEAD
       window.scrollY >= document.documentElement.clientHeight-80 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
+=======
+      window.scrollY >= 100 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
     },
   },
   created() {
@@ -189,6 +205,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+<<<<<<< HEAD
 .img-description1{
   padding: 0px 180px;
   box-sizing: border-box;
@@ -216,6 +233,9 @@ export default {
   margin-bottom: 32px;
 }
 .firstScreen {
+=======
+.firstScreen{
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
   position: relative;
 }
 .firstScreen > .title {
@@ -239,11 +259,17 @@ export default {
   align-items: center;
   font-size: 14px;
 }
+<<<<<<< HEAD
 .text-description,
 .img-description,
 .serveInclude {
   // width: 1620px;
   padding: 0 180px;
+=======
+.text-description,.img-description,.serveInclude{
+  // width: 1620px;
+  padding: 0 240px;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 .text-description p {
   // color: white;
@@ -255,11 +281,14 @@ export default {
 .img-description > h2 {
   margin-bottom: 11px;
   font-size: 16px;
+<<<<<<< HEAD
 }
 
 .img-description > h2 {
   margin-bottom: 11px;
   font-size: 14px;
+=======
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 .case {
   display: flex;
@@ -277,12 +306,17 @@ export default {
   // width: 516px;
   // height: 348px;
   padding: 12px;
+<<<<<<< HEAD
   border: 1px solid rgb(0,65,56);
+=======
+  border: 2px solid #404040;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 .case1,
 .case2,
 .case3 {
   // width: 490px;
+<<<<<<< HEAD
   // margin: 13px auto;
   // padding: 10px;
 }
@@ -343,6 +377,34 @@ export default {
   .firstScreen > .title {
     bottom: 60px;
   }
+=======
+  // height: 322px;
+  // margin: 13px auto;
+}
+
+
+.serveInclude{
+    width: 100%;
+    box-sizing: border-box;
+    // height: 211px;
+    background-color: #1c1c1c;
+}
+.serve-info{
+    // margin: 42px auto;
+    padding: 42px 0;
+}
+.serve-info>h2{
+    color:white;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+.serve-info{
+    // width: 1620px;
+}
+.serve-info>p{
+    color: white;
+    line-height: 28px;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 @media screen and(max-width: 1024px) {
   .text-description,
@@ -421,7 +483,37 @@ export default {
   }
 }
 
+<<<<<<< HEAD
 .img-description {
   padding: 0;
+=======
+.footImg{
+    // width: 1920px;
+    // height: 802px;
 }
+
+
+
+@media screen and(max-width: 1440px) {
+  .text-description,.img-description,.serveInclude{padding: 0 120px;}
+  .firstScreen > .title{padding: 0 120px;}
+
+  .firstScreen > .title {bottom: 60px;}
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
+}
+@media screen and(max-width: 1024px) {
+  .text-description,.img-description,.serveInclude{padding: 0 60px;}
+  .firstScreen > .title{padding: 0 60px;}
+
+  .firstScreen > .title {bottom: 40px;}
+  .case > .case-content:not(:last-child) {margin-right: 15px;}
+  .serve-info{padding: 20px 0;}
+  .serve-info>h2{margin-bottom: 10px;}
+}
+@media screen and(max-width: 992px) {
+  .text-description,.img-description,.serveInclude{padding: 0 20px;}
+  .firstScreen > .title{padding: 0 20px;}
+}
+
+
 </style>

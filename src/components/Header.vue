@@ -10,8 +10,13 @@
             ><img
               src="../assets/icon/logo2.png"
               alt=""
+<<<<<<< HEAD
               width="70px"
               height="42px"
+=======
+              width="80px"
+              height="48px"
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
           /></router-link>
         </div>
         <div class="nav">
@@ -22,8 +27,13 @@
                 <img
                   src="../assets/icon/hotel2.png"
                   alt=""
+<<<<<<< HEAD
                   width="18px"
                   height="18px" /><span>酒店和度假村</span>
+=======
+                  width="22px"
+                  height="22px" /><span>酒店和度假村</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -32,8 +42,13 @@
                 <img
                   src="../assets/icon/brand2.png"
                   alt=""
+<<<<<<< HEAD
                   width="16.5px"
                   height="16.5px" /><span>品牌故事</span>
+=======
+                  width="21px"
+                  height="21px" /><span>品牌故事</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -42,8 +57,13 @@
                 <img
                   src="../assets/icon/health2.png"
                   alt=""
+<<<<<<< HEAD
                   width="17.5px"
                   height="17.5px" /><span>养生疗愈</span>
+=======
+                  width="21px"
+                  height="21px" /><span>养生疗愈</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -52,8 +72,13 @@
                 <img
                   src="../assets/icon/cooperation2.png"
                   alt=""
+<<<<<<< HEAD
                   width="18px"
                   height="18px" /><span>酒店合作</span>
+=======
+                  width="22px"
+                  height="22px" /><span>酒店合作</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -61,11 +86,19 @@
               <img
                 src="../assets/icon/login2.png"
                 alt=""
+<<<<<<< HEAD
                 width="16px"
                 height="16px"
               /><span>登陆</span>
             </li>
             <!-- <li class="language"><span>中文</span></li> -->
+=======
+                width="22px"
+                height="22px"
+              /><span>登陆</span>
+            </li>
+            <li class="language"><span>中文</span></li>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
           </ul>
         </div>
       </div>
@@ -76,8 +109,13 @@
             ><img
               src="../assets/icon/logo1.png"
               alt=""
+<<<<<<< HEAD
               width="70px"
               height="42px"
+=======
+              width="80px"
+              height="48px"
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
           /></router-link>
         </div>
         <div class="nav">
@@ -87,8 +125,13 @@
                 ><img
                   src="../assets/icon/hotel1.png"
                   alt=""
+<<<<<<< HEAD
                   width="18px"
                   height="18px" /><span>酒店和度假村</span>
+=======
+                  width="22px"
+                  height="22px" /><span>酒店和度假村</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -97,8 +140,13 @@
                 <img
                   src="../assets/icon/brand1.png"
                   alt=""
+<<<<<<< HEAD
                   width="16.5px"
                   height="16.5px" /><span>品牌故事</span>
+=======
+                  width="21px"
+                  height="21px" /><span>品牌故事</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -107,8 +155,13 @@
                 <img
                   src="../assets/icon/health1.png"
                   alt=""
+<<<<<<< HEAD
                   width="17.5px"
                   height="17.5px" /><span>养生疗愈</span>
+=======
+                  width="21px"
+                  height="21px" /><span>养生疗愈</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -117,8 +170,13 @@
                 <img
                   src="../assets/icon/cooperation1.png"
                   alt=""
+<<<<<<< HEAD
                   width="18px"
                   height="18px" /><span>酒店合作</span>
+=======
+                  width="22px"
+                  height="22px" /><span>酒店合作</span>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
                 <div></div
               ></router-link>
             </li>
@@ -126,17 +184,29 @@
               <img
                 src="../assets/icon/login1.png"
                 alt=""
+<<<<<<< HEAD
                 width="16px"
                 height="16px"
               /><span>登陆</span>
             </li>
             <!-- <li class="language"><span>中文</span></li> -->
+=======
+                width="22px"
+                height="22px"
+              /><span>登陆</span>
+            </li>
+            <li class="language"><span>中文</span></li>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
           </ul>
         </div>
       </div>
     </div>
     <div v-if="port == 2">
+<<<<<<< HEAD
       <div class="item-logo2 header3">
+=======
+      <div class="item-logo header3">
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
         <router-link to="/"
           ><img
             src="../assets/icon/logo1.png"
@@ -144,13 +214,18 @@
             width="50px"
             height="28px"
         /></router-link>
+<<<<<<< HEAD
         <li class="tologin">
+=======
+        <li class="tologin" @click="login">
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
           <img
             src="../assets/icon/login1.png"
             alt=""
             width="22px"
             height="22px"
           />
+<<<<<<< HEAD
           <span class="tologin-text" style="margin-left: 10px;margin-right:20px;font-size:12px"  @click="login">登陆</span>
 
            <img 
@@ -176,6 +251,52 @@
         </router-link>
         <router-link to="/cooperation" class="move">
           <span>酒店合作</span>
+=======
+          <span class="tologin-text" style="margin-left: 10px">登陆</span>
+        </li>
+      </div>
+
+      <div class="item">
+        <router-link to="/" class="move">
+          <img
+            src="../assets/icon/hotel1.png"
+            alt=""
+            width="22px"
+            height="22px"
+          />
+          <span>酒店和度假村</span>
+          <div></div>
+        </router-link>
+        <router-link to="/brandstory" class="move">
+          <img
+            src="../assets/icon/brand1.png"
+            alt=""
+            width="21px"
+            height="21px"
+          />
+          <span>品牌故事</span>
+          <div></div>
+        </router-link>
+        <router-link to="/healthcare" class="move">
+          <img
+            src="../assets/icon/health1.png"
+            alt=""
+            width="21px"
+            height="21px"
+          />
+          <span>养生疗愈</span>
+          <div></div>
+        </router-link>
+        <router-link to="/cooperation" class="move">
+          <img
+            src="../assets/icon/cooperation1.png"
+            alt=""
+            width="22px"
+            height="22px"
+          />
+          <span>酒店合作</span>
+          <div></div>
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
         </router-link>
       </div>
       </el-collapse-transition>
@@ -187,13 +308,19 @@
 export default {
   created() {
     this.$store.commit("OpenLogPanel", false);
+<<<<<<< HEAD
   
+=======
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
   },
   data() {
     return {
       // openLogPanel: false,
       port: 1, //1 pc端  2 移动端
+<<<<<<< HEAD
       show3: false
+=======
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
     };
   },
   mounted() {
@@ -212,10 +339,13 @@ export default {
       );
       return flag;
     },
+<<<<<<< HEAD
 
     menu(){
      
     },
+=======
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
     login() {
       // this.openLogPanel = true;
       this.$store.commit("OpenLogPanel", true);
@@ -241,16 +371,21 @@ export default {
   color: #ffffff;
 }
 .item-logo{
+<<<<<<< HEAD
   z-index: 9999;
   width: 100%;
   position: fixed;
   top: 0;
+=======
+  width: 100%;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .item-logo2{
   z-index: 9999;
@@ -286,6 +421,24 @@ export default {
 }
 .move span {
   font-size: 13px;
+=======
+.item {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0,0,0,0.9);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.move {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.move span {
+  margin-left: 20px;
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 // 移动端样式结束
 
@@ -308,12 +461,19 @@ a:hover {
 
 // 移动端样式开始
 .header3 {
+<<<<<<< HEAD
   height: 45px;
   position: fixed;
   top: 0;
   display: flex;
   width: 100%;
   background-color:#1c1c1c;
+=======
+  height: 70px;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
   justify-content: space-between;
   color: white;
 }
@@ -423,6 +583,7 @@ a:hover {
 }
 
 @media screen and(max-width: 1440px) {
+<<<<<<< HEAD
   // .logo {
   //   margin-left: 120px;
   // }
@@ -445,14 +606,44 @@ a:hover {
   // .nav {
   //   margin-right: 20px;
   // }
+=======
+  .logo {
+    margin-left: 120px;
+  }
+  .nav {
+    margin-right: 120px;
+  }
+}
+@media screen and(max-width: 1024px) {
+  .logo {
+    margin-left: 60px;
+  }
+  .nav {
+    margin-right: 60px;
+  }
+}
+@media screen and(max-width: 992px) {
+  .logo {
+    margin-left: 20px;
+  }
+  .nav {
+    margin-right: 20px;
+  }
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 @media screen and(max-width: 810px) {
   .navItem {
     padding-left: 30px;
   }
+<<<<<<< HEAD
   // .login {
   //   margin: 0 30px;
   // }
+=======
+  .login {
+    margin: 0 30px;
+  }
+>>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 @media screen and(max-width: 660px) {
 }
