@@ -9,6 +9,7 @@
 <style lang="scss">
 @import url(./assets/css/reset.css);
 @import url(./assets/css/global.css);
+@import url(./assets/css/reset_custom.css);
 
 @media screen and(max-width: 810px) {
   // .hotel-link>.hotel:not(:last-child){margin-right: 10px;}

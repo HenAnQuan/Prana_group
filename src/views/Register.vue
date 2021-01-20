@@ -60,25 +60,28 @@ export default {
         position: relative;
     }
     .startInput{
-        height: 690px;
+        // height: 690px;
         // width: 1920px;
+        display: flex;
+        align-items: stretch;
         width: 100%;
         background:#eef2f3;
         padding:135px 0;
     }
     .register{
-        width: 1620px;
+        // width: 1620px;
         margin: 0 auto;
         display: flex;
     }
 
 
     .register-info{
-        width: 485px;
-        height: 636px;
+        // width: 485px;
+        // height: 636px;
+        // padding: 0 28px;
         background-color: white;
         margin-right: 28px;
-        padding-top: 54px;
+        padding: 54px 28px 0 28px;
         display: flex;
         flex-direction: column;
         align-items: center;

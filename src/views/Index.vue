@@ -24,7 +24,7 @@
           <div class="brand-info">
             <h3 class="brand-title">品牌故事</h3>
             <p class="brand-content">世界上有这样一种酒店，他们避开热闹的著名景点，选择偏僻而纯净的自然环境；他们拥有唤活身心和疗愈的氛围，提供专业的健康生活咨询、各种疗法、课程和活动，让客人在放松享受的同时，获得持续健康的生活方式。</p>
-            <a class="brand-more" href=""><span>更多</span></a>
+            <router-link class="brand-more" to="/brandstory"><span>更多</span></router-link>
           </div>
         </div>
         <div class="brand brand2">
@@ -35,7 +35,7 @@
             <h3 class="brand-title">养生疗愈</h3>
             <p class="brand-content">作为顶级养生酒店，我们汇聚国内外顶级的自然疗法理疗师、中医师、禅修大师、健身教练、瑜伽和太极老师，通过各种能量平衡的设施与服务，让客人在海滨茶园的氛围中静心、清零，开启奢华酒店全新的健康养生时代。
             </p>
-            <a class="brand-more" href=""><span>更多</span></a>
+            <router-link class="brand-more" to="/healthcare"><span>更多</span></router-link>
           </div>
         </div>
         <div class="brand brand3">
@@ -46,7 +46,7 @@
             <h3 class="brand-title">酒店合作</h3>
             <p class="brand-content">璞纳养生酒店集团是国内第一家集养生酒店咨询、开发和运营管理为一体的酒店集团。作为业主，我们拥有舟山璞纳养生酒店；作为咨询机构，我们服务过上海阿纳迪酒店、腾冲东山养生酒店、三亚海棠湾养生酒店等等。
 </p>
-            <a class="brand-more" href=""><span>更多</span></a>
+            <router-link class="brand-more" to="/cooperation"><span>更多</span></router-link>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@ export default {
           },
           loop: true,
           autoplay: {
-            delay: 4000,
+            delay: 6000,
             disableOnInteraction: false,
           },
           navigation: {
@@ -303,33 +303,29 @@ export default {
 }
 
 .brand{
-  // width: 515px;
   flex: 1;
 }
 .brand1,.brand2{
   margin-right: 20px;
 }
 .brand-img{
-  // width: 515px;
-
   width: 100%;
   height: 100%;
   border: 1px solid rgb(0,65,56);
   text-align: center;
-  padding: 12px;
+  // padding: 12px;
+  padding: 8px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .brands-img{
-  // width: 515px;
-
   width: 100%;
   height: 100%;
   text-align: center;
   padding: 26px 12px 0 12px;
   box-sizing: border-box;
 }
-
 .brands-img img{
   width: 100%;
   height: 250px;
@@ -339,8 +335,12 @@ export default {
 
 .brand-img img{
   width: 100%;
-  // height: 250px;
+  transition: all 0.6s;
 }
+.brand-img img:hover{
+  transform: scale(1.1);
+}
+
 .brand-info{
   margin-left:15px;
 }
@@ -374,10 +374,20 @@ export default {
 }
 .brand-more{
   padding-bottom: 6px;
-  // text-decoration: underline;
   color: #404040;
   font-size: 14px;
 }
+
+.brand-more span{
+  transition: all 1s;
+}
+.brand-more span:hover{
+  // font-weight: bold;
+  // border: 1px solid #404040;
+  // padding: 6px;
+  color: rgb(0,65,56);
+}
+
 .brand-mores{
   width: 100px;
   height: 35px;

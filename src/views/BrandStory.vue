@@ -6,11 +6,11 @@
     <div class="body container">
       <!-- 首屏 -->
       <div class="firstScreen">
-        <div class="label">
+        <!-- <div class="label">
           <div class="label1"><span>缘起</span></div>
           <div class="label2"><span>创新</span></div>
           <div class="label3"><span>发展</span></div>
-        </div>
+        </div> -->
         <div class="title">
           <span>璞纳</span>
           <div class="title-info">
@@ -310,31 +310,31 @@ export default {
 // 手机端样式结束
 
 
-.label > div {
-  position: absolute;
-  text-align: center;
-}
-.label > div > span {
-  color: white;
-  font-size: 16px;
-  line-height: 40px;
-}
-.label > div {
-  width: 80px;
-  height: 40px;
-}
-.label1 {
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 269px;
-}
-.label2 {
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 359px;
-}
-.label3 {
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 449px;
-}
+// .label > div {
+//   position: absolute;
+//   text-align: center;
+// }
+// .label > div > span {
+//   color: white;
+//   font-size: 16px;
+//   line-height: 40px;
+// }
+// .label > div {
+//   width: 80px;
+//   height: 40px;
+// }
+// .label1 {
+//   background-color: rgba(0, 0, 0, 0.6);
+//   top: 269px;
+// }
+// .label2 {
+//   background-color: rgba(0, 0, 0, 0.6);
+//   top: 359px;
+// }
+// .label3 {
+//   background-color: rgba(0, 0, 0, 0.6);
+//   top: 449px;
+// }
 .firstScreen{
   position: relative;
 }
