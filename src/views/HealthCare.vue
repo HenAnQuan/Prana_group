@@ -38,7 +38,6 @@
             调理健康问题，追根溯源，从源头入手：我们不仅仅缓解疲惫、失眠等症状，更针对产生这些症状的深层原因——压力、情绪、饮食等诱因，追根溯源，从源头入手，深入疗愈，从而彻底改善。<br />
             萃取本地物产精华，与大地连接，与自然一体：我们沿袭自然疗法的智慧，萃取本地茶园新鲜采摘的茶叶，精心研磨，用以做SPA原料，带来回归自然的极致体验。
           </p>
-<<<<<<< HEAD
           <div class="more-item" v-if="port == 2">
           <p class="health" >
             作为顶级养生酒店，我们汇聚国内外顶级的自然疗法理疗师、中医师、禅修大师、健身教练、瑜伽和太极老师，推出2晚、3晚和5晚的“净化排毒”“舒压放松”“睡眠提升”“颈椎舒缓”“体重管理”和“亲子养生假期”等疗程，通过各种能量平衡的设施与服务，将全球前沿的健康理念融入度假体验当中，让客人在海滨茶园的氛围中静心、清零，开启奢华酒店全新的健康养生时代。
@@ -84,10 +83,6 @@
           </div> -->
         </div>
          <div class="img-description" v-if="port == 1">
-=======
-        </div>
-          <div class="img-description">
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
               <div class="pic-bd">
                   <div class="pic1">
                       <img src="../assets/img/child-vacation1.jpg" alt="" width="100%">
@@ -98,20 +93,12 @@
                       <img src="../assets/img/child-vacation2.jpg" alt="" width="100%">
                   </div>
               </div>
-<<<<<<< HEAD
         </div>
         <div class="child">
           <p>
             针对中国市场的特色——家庭亲子度假，我们还推出适合小朋友们养生体验和游乐的项目：儿童水果SPA，亲子盐雾呼吸疗愈、亲子有机农场，专属儿童泳池、儿童水上乐园和室内儿童乐园等等。这样全家人都可以享受一个完美的健康假期！
           </p>
         </div>
-=======
-          </div>
-          <div class="child">
-              <p>针对中国市场的特色——家庭亲子度假，我们还推出适合小朋友们养生体验和游乐的项目：儿童水果SPA，亲子盐雾呼吸疗愈、亲子有机农场，专属儿童泳池、儿童水上乐园和室内儿童乐园等等。这样全家人都可以享受一个完美的健康假期！</p>
-          </div>
-        
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
       </div>
     </div>
     <Footer />
@@ -157,11 +144,7 @@ export default {
       return flag;
     },
     intoSecondscreen() {
-<<<<<<< HEAD
       window.scrollY >= document.documentElement.clientHeight-80 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
-=======
-      window.scrollY >= 100 ? this.movetoFirstSecond = true : this.movetoFirstSecond = false;
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
     },
   },
   created() {
@@ -215,11 +198,7 @@ export default {
   // height: 1080px;
   display: flex;
 }
-<<<<<<< HEAD
 .secondScreen img {
-=======
-.secondScreen img{  
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
   vertical-align: middle;
 }
 .text-description {
@@ -227,7 +206,6 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-<<<<<<< HEAD
   padding: 0 180px;
   box-sizing: border-box;
 }
@@ -238,24 +216,11 @@ export default {
 .text-description p {
   line-height: 28px;
   text-align: justify;
-=======
-  padding: 0 240px;
-  box-sizing: border-box;
-}
-.text-description>p,
-.text-description>div {
-  // width: 1620px;
-}
-.text-description p{
-    line-height: 28px;
-    text-align: justify;
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 .health {
   margin: 64px 0 71px 0;
 }
 
-<<<<<<< HEAD
 .img-description {
   padding: 0 180px;
   display: flex;
@@ -268,11 +233,6 @@ export default {
   // width: 786px;
   // height: 536px;
   padding: 12px;
-=======
-.img-description{
-  padding: 0 240px;
-    display: flex;
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 .pic1,
 .pic2 {
@@ -280,7 +240,6 @@ export default {
   // height: 510px;
   // margin: 13px auto;
 }
-<<<<<<< HEAD
 
 .child {
   margin-top: 49px;
@@ -338,46 +297,6 @@ export default {
   .img-description > .pic-bd:first-child {
     margin-right: 20px;
   }
-=======
-.pic-bd{
-    border: 2px solid #404040;
-    // width: 786px;
-    // height: 536px;
-    padding: 12px;
-}
-.pic1,.pic2{
-    // width: 760px;
-    // height: 510px;
-    // margin: 13px auto;
-}
-
-.child{
-    margin-top: 49px;
-    padding: 0 240px;
-}
-.child p{
-  line-height: 28px;
-}
-
-
-@media screen and(max-width: 1440px) {
-  .text-description {padding: 0 120px;}
-  .img-description{padding: 0 120px;}
-  .child{padding: 0 120px;}
-}
-@media screen and(max-width: 1024px) {
-  .text-description {padding: 0 60px;}
-  .img-description{padding: 0 60px;}
-  .child{padding: 0 60px;}
-}
-@media screen and(max-width: 992px) {
-  .text-description {padding: 0 20px;}
-  .img-description{padding: 0 20px;}
-  .child{padding: 0 20px;}
-}
-@media screen and(max-width: 1440px) {
-  .img-description>.pic-bd:first-child{margin-right: 20px;}
->>>>>>> 4a976d2ee9dfe527ae85775e04cac2c9401baa1f
 }
 @media screen and(max-width: 660px) {
 }
