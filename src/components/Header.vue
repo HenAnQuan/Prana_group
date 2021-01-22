@@ -163,7 +163,7 @@
       </div>
       <div style="width:100%;height:45px"></div>
       
-      <el-collapse-transition>
+      <transition name="el-zoom-in-top">
       <div class="item" v-show="show3">
         <router-link to="/" class="move">
           <span>酒店和度假村</span>
@@ -179,7 +179,7 @@
         </router-link>
         <a href="http://www.ehome-vip.com" class="move"><span>益宏集团</span></a>
       </div>
-      </el-collapse-transition>
+      </transition>
     </div>
   </div>
 </template>
