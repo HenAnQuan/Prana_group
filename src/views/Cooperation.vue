@@ -26,7 +26,7 @@
             璞纳养生酒店集团是国内第一家集养生酒店咨询、开发和运营管理为一体的酒店集团。作为业主，我们拥有舟山璞纳养生酒店；作为咨询机构，我们服务过上海阿纳迪酒店、腾冲东山养生酒店、三亚海棠湾养生酒店等等。
           </p>
           <div class="more" @click="show1 = !show1" v-if="show1 == false">
-            查看更多
+            更多
           </div>
           <el-collapse-transition>
             <p v-show="show1">

@@ -98,7 +98,7 @@
           环境污染、节奏紧张和缺乏安全感的社会冲刷着人们的生活平衡，健康养生已成为我们最关心的话题。<br />
           健康不仅是一种身体上的状态，还与我们的精神
         </p>
-        <div class="more" @click="show1 = !show1" v-if="show1 == false">查看更多</div>
+        <div class="more" @click="show1 = !show1" v-if="show1 == false">更多</div>
         
         <el-collapse-transition>
           <p v-show="show1">
@@ -121,7 +121,7 @@
         <p>
           舟山璞纳养生酒店是一次全新的尝试。她拥有世界上优秀的养生酒店的基因，并充分融合本土文化和当地资源进行再创造。
         </p>
-        <div class="more" @click="show2 = !show2" v-if="show2 == false">查看更多</div>
+        <div class="more" @click="show2 = !show2" v-if="show2 == false">更多</div>
         <el-collapse-transition>
           <p v-show="show2">
             例如，璞纳集合了来自全世界各地的疗法：来自美国的物理肌体理疗，德国的自然疗法，日本的汤泉疗愈，印度的阿育吠陀，中国的古中医，而结合舟山本地海天佛国的文化氛围和茶园的资源，我们推出一系列禅修课程，以及海疗和茶疗SPA。<br />
@@ -142,7 +142,7 @@
         <p>
           在中国，养生旅行仍然是件小众的事情，而我们希望因为璞纳的出现，能够唤醒大家对于疗愈之旅的全新认知，
         </p>
-        <div class="more" @click="show3 = !show3" v-if="show3 == false">查看更多</div>
+        <div class="more" @click="show3 = !show3" v-if="show3 == false">更多</div>
         <el-collapse-transition>
           <p v-show="show3">
             希望璞纳能够让全家人建立起和自己内心的联系，改变过去的生活方式，以及学习如何在未来保持健康。璞纳不仅仅是拥有水疗服务的酒店，而是一家能够完整地集中于全方位健康和疗愈的酒店，从每个细节都完整的体现着身心灵养生的宗旨，包括氛围、客户服务、管理、健康理念、健身项目、餐饮、人力资源、环境、社会责任等等。<br />

@@ -177,6 +177,7 @@
         <router-link to="/cooperation" class="move">
           <span>酒店合作</span>
         </router-link>
+        <a href="http://www.ehome-vip.com" class="move"><span>益宏集团</span></a>
       </div>
       </el-collapse-transition>
     </div>
