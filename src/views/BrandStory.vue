@@ -370,7 +370,7 @@ export default {
 
 .main-info {
   box-sizing: border-box;
-  padding: 50px 240px;
+  padding: 50px 180px;
   width: 100%;
 }
 .brandStory {
@@ -401,7 +401,7 @@ export default {
 }
 .storyText {
   flex: 1;
-  padding: 20px 40px;
+  // padding: 20px 40px;
   border: 1px solid #c1c1c1;
   border-left: none;
   display: flex;
@@ -431,19 +431,24 @@ export default {
 @media screen and(max-width: 1570px) {.storyText>p{line-height: 22px;}}
 
 @media screen and(max-width: 1440px) {
-  .brand-story{padding: 0 120px;}
-  .hotel-link{padding: 0 120px;}
+  .main-info{padding: 50px 120px;}
+  // .brand-story{padding: 0 120px;}
+  // .hotel-link{padding: 0 120px;}
 }
+@media screen and(max-width: 1400px) {
+  .main-info{padding: 30px 80px;}
+}
+@media screen and(max-width: 1220px) {
+  .main-info{padding: 30px 40px;}
+  .storyText>p{padding: 20px 20px;}
+}
+@media screen and(max-width: 1220px) {.storyText>p{line-height: 20px;}}
 @media screen and(max-width: 1024px) {
-  .brand-story{padding: 0 60px;}
-  .hotel-link{padding: 0 60px;}
 }
 @media screen and(max-width: 992px) {
-  .brand-story{padding: 0 40px;}
-  .hotel-link{padding: 0 40px;}
+  .main-info{padding: 50px 20px;}
 }
 @media screen and(max-width: 810px) {
-  // .hotel-link>.hotel:not(:last-child){margin-right: 10px;}
   .story > p{
     line-height: 26px;
   }

@@ -13,33 +13,16 @@
       </div>
       <!-- 正文内容 -->
       <div class="main-info"  >
-        <!-- <div class="secondScreen" v-if="port == 1">
-          <div>
-            <img src="../assets/img/banner3-2-1.jpg" alt="" width="100%" />
-          </div>
-          <div>
-            <img
-              v-if="port == 1"
-              src="../assets/img/banner3-2-2.jpg"
-              alt=""
-              width="100%"
-            />
-          </div>
-          <div>
-            <img src="../assets/img/banner3-2-3.jpg" alt="" width="100%" />
-          </div>
-        </div> -->
         <div class="text-description">
-          <p class="health" v-if="port == 1">
-            作为顶级养生酒店，我们汇聚国内外顶级的自然疗法理疗师、中医师、禅修大师、健身教练、瑜伽和太极老师，推出2晚、3晚和5晚的“净化排毒”“舒压放松”“睡眠提升”“颈椎舒缓”“体重管理”和“亲子养生假期”等疗程，通过各种能量平衡的设施与服务，将全球前沿的健康理念融入度假体验当中，让客人在海滨茶园的氛围中静心、清零，开启奢华酒店全新的健康养生时代。<br />
-            <br />
-            <br />
+          <div class="health" v-if="port == 1">
+            <p> 作为顶级养生酒店，我们汇聚国内外顶级的自然疗法理疗师、中医师、禅修大师、健身教练、瑜伽和太极老师，推出2晚、3晚和5晚的“净化排毒”“舒压放松”“睡眠提升”“颈椎舒缓”“体重管理”和“亲子养生假期”等疗程，通过各种能量平衡的设施与服务，将全球前沿的健康理念融入度假体验当中，让客人在海滨茶园的氛围中静心、清零，开启奢华酒店全新的健康养生时代。</p>
+            <p>
             汇集全球自然疗法的精华：印度阿育吠陀、海洋疗愈、美国物理肌体理疗、日式汤泉疗愈、德国自然疗法、中国的古中医......在舟山便能零距离体验来自世界各地最纯正的自然疗愈，享受世界级的健康服务。
             调理健康问题，追根溯源，从源头入手：我们不仅仅缓解疲惫、失眠等症状，更针对产生这些症状的深层原因——压力、情绪、饮食等诱因，追根溯源，从源头入手，深入疗愈，从而彻底改善。<br />
-            萃取本地物产精华，与大地连接，与自然一体：我们沿袭自然疗法的智慧，萃取本地茶园新鲜采摘的茶叶，精心研磨，用以做SPA原料，带来回归自然的极致体验。
-          </p>
+            萃取本地物产精华，与大地连接，与自然一体：我们沿袭自然疗法的智慧，萃取本地茶园新鲜采摘的茶叶，精心研磨，用以做SPA原料，带来回归自然的极致体验。</p>
+          </div>
           <div class="more-item" v-if="port == 2">
-          <p class="health" >
+          <p class="healths" >
             作为顶级养生酒店，我们汇聚国内外顶级的自然疗法理疗师、中医师、禅修大师、健身教练、瑜伽和太极老师，推出2晚、3晚和5晚的“净化排毒”“舒压放松”“睡眠提升”“颈椎舒缓”“体重管理”和“亲子养生假期”等疗程，通过各种能量平衡的设施与服务，将全球前沿的健康理念融入度假体验当中，让客人在海滨茶园的氛围中静心、清零，开启奢华酒店全新的健康养生时代。
           </p>
           <div class="more"  @click="show1 = !show1" v-if="show1 == false">
@@ -209,8 +192,8 @@ export default {
   padding: 0 180px;
   box-sizing: border-box;
 }
-.text-description > p,
-.text-description > div {
+.text-description  p,
+.text-description  div {
   // width: 1620px;
 }
 .text-description p {
@@ -218,7 +201,10 @@ export default {
   text-align: justify;
 }
 .health {
-  margin: 64px 0 71px 0;
+  margin: 64px 0 64px 0;
+}
+.health p:first-child{
+  margin-bottom: 60px;
 }
 
 .img-description {
@@ -261,6 +247,12 @@ export default {
   }
 }
 @media screen and(max-width: 1024px) {
+  .health {
+  margin: 32px 0 32px 0;
+}
+.health p:first-child{
+  margin-bottom: 30px;
+}
   .text-description {
     padding: 0 60px;
   }
@@ -273,16 +265,24 @@ export default {
 }
 @media screen and(max-width: 992px) {
   .health {
-    margin: 24px 0 0px 0;
+    // margin: 24px 0 0px 0;
+    margin: 24px 0 24px 0;
+  }
+  .healths {
+    margin: 15px 0 0 0;
   }
   .text-description {
     padding: 0 20px;
   }
-  .img-description {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
+  .img-description{
+     padding: 0 20px;
   }
+  
+  // .img-description {
+  //   padding: 0px;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
   .pic-bd {
     width: 100%;
     padding: 0px;

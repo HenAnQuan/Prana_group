@@ -362,7 +362,7 @@ a:hover {
 .nav {
   margin-top: 16px;
   // margin-right: 240px;
-  margin-right: 30px;
+  margin-right: 40px;
   font-size: 12px;
 }
 .navItem {
@@ -409,7 +409,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   border: 1px solid white;
-  margin: 0 30px 7px 40px;
+  margin: 0 0px 7px 40px;
 }
 .header2 .login {
   border: 1px solid #404040;
@@ -424,36 +424,24 @@ a:hover {
 }
 
 @media screen and(max-width: 1440px) {
-  // .logo {
-  //   margin-left: 120px;
-  // }
-  // .nav {
-  //   margin-right: 120px;
-  // }
+  .navItem {
+    padding-left: 30px;
+  }
 }
 @media screen and(max-width: 1024px) {
-  // .logo {
-  //   margin-left: 60px;
-  // }
-  // .nav {
-  //   margin-right: 60px;
-  // }
 }
 @media screen and(max-width: 992px) {
-  // .logo {
-  //   margin-left: 20px;
-  // }
-  // .nav {
-  //   margin-right: 20px;
-  // }
+  .logo {
+    margin-left: 20px;
+  }
+  .nav {
+    margin-right: 20px;
+  }
 }
 @media screen and(max-width: 810px) {
   .navItem {
     padding-left: 30px;
   }
-  // .login {
-  //   margin: 0 30px;
-  // }
 }
 @media screen and(max-width: 660px) {
 }

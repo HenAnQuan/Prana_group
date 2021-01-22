@@ -12,6 +12,7 @@
           </p>
         </div>
       </div>
+
       <!-- 正文内容 -->
       <div class="main-info">
         <div class="text-description" v-if="port == 1">
@@ -21,7 +22,7 @@
             养生酒店作为一个新型跨界的酒店类型，现阶段整个国际上有经验的团队并不多，包括有经验的设计师、养生活动配置顾问、运营管理公司等。我们希望以我们多年在养生酒店行业的经验和资源，帮助真正的养生酒店开发者实现他们的梦想。<br />
           </p>
         </div>
-        <div class="text-description" v-if="port == 2" style="display: flex;align-items: center;flex-direction: column;justify-content: center;">
+        <div class="text-description2" v-if="port == 2" style="display: flex;align-items: center;flex-direction: column;justify-content: center;">
           <p>
             璞纳养生酒店集团是国内第一家集养生酒店咨询、开发和运营管理为一体的酒店集团。作为业主，我们拥有舟山璞纳养生酒店；作为咨询机构，我们服务过上海阿纳迪酒店、腾冲东山养生酒店、三亚海棠湾养生酒店等等。
           </p>
@@ -222,7 +223,7 @@ export default {
   // margin: -119px auto 119px auto;
   width: 100%;
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   padding: 0 240px;
   box-sizing: border-box;
 }
@@ -239,16 +240,17 @@ export default {
   align-items: center;
   font-size: 14px;
 }
-.text-description,
+.text-description,.text-description2
 .img-description,
 .serveInclude {
   // width: 1620px;
   padding: 0 180px;
 }
-.text-description p {
+.text-description p{
+  font-size: 14px;
   // color: white;
   line-height: 28px;
-  margin: 82px 0 61px 0;
+  margin: 60px 0 60px 0;
   text-align: justify;
 }
 
@@ -258,6 +260,7 @@ export default {
 }
 
 .img-description > h2 {
+  padding-left: 20px;
   margin-bottom: 11px;
   font-size: 14px;
 }
@@ -347,7 +350,7 @@ export default {
 @media screen and(max-width: 1024px) {
   .text-description,
   .img-description,
-  img-description1,
+  .img-description1,
   .serveInclude {
     padding: 0 60px;
   }
@@ -358,8 +361,11 @@ export default {
   .firstScreen > .title {
     bottom: 40px;
   }
-  .case > .case-content:not(:last-child) {
+  .img-description .case > .case-content:not(:last-child) {
     margin-right: 0px;
+  }
+  .img-description1 .case > .case-bd {
+    border: none;
   }
   .serve-info {
     padding: 20px 0 15px 0;
@@ -372,9 +378,7 @@ export default {
   .case1,
 .case2,
 .case3 {
-  // width: 490px;
-  // margin: 13px auto;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #1c1c1c;
 }
   .case {
@@ -393,18 +397,24 @@ export default {
     margin: 12px 0 30px 0;
   }
 
-  .img-description > h2 {
+  .img-description2 > h2 {
     margin-left: 20px;
   }
 
-  .text-description p {
+  .text-description2 p{
     // color: white;
-    line-height: 28px;
-    margin: 4px 0 4px 0;
+    line-height: 22px;
+    margin: 40px 0;
+    text-align: justify;
+  }
+  .text-description2 p {
+    // color: white;
+    line-height: 22px;
+    margin: 15px 0 4px 0;
     text-align: justify;
   }
 
-  .text-description,
+  .text-description2,
   .img-description,
   .serveInclude {
     padding: 0 15px 0 15px;
@@ -413,7 +423,7 @@ export default {
     padding: 0 20px;
   }
   .firstScreen > .title {
-    bottom: 10px;
+    bottom: 20px;
     letter-spacing: 0px;
   }
   .firstScreen > .title > p {
